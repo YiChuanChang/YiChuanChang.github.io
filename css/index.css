@@ -484,41 +484,43 @@ nav {
     nav a::before {
       top: 10px; }
 
-  #head-container .social-media {
-    top: 10px;
-    left: 15px; }
-    #head-container .social-media a {
-      padding-top: 7px; }
-      #head-container .social-media a img {
-        width: 20px;
-        height: 20px; }
-  #head-container .logo {
-    padding-top: 20px; }
-  #head-container .picture-container {
-    width: 100%; }
-    #head-container .picture-container .light-bg {
-      margin-top: 80px; }
-    #head-container .picture-container img.portrait {
-      left: 45vw;
-      top: 15vh;
-      width: 40%;
-      transform: translateZ(100000px); }
-    #head-container .picture-container img.dark {
-      left: 10vw; }
-    #head-container .picture-container .text {
-      font-size: 50px;
-      left: 11vw;
-      top: 34vh; }
-  #head-container .intro.left {
-    display: none; }
-  #head-container .intro.right {
-    left: 15px;
-    bottom: 8vh;
-    font-size: 14px;
-    text-align: left; }
+  #head-container {
+    height: 90vh; }
+    #head-container .social-media {
+      top: 10px;
+      left: 15px; }
+      #head-container .social-media a {
+        padding-top: 7px; }
+        #head-container .social-media a img {
+          width: 20px;
+          height: 20px; }
+    #head-container .logo {
+      padding-top: 20px; }
+    #head-container .picture-container {
+      width: 100%; }
+      #head-container .picture-container .light-bg {
+        margin-top: 60px; }
+      #head-container .picture-container img.portrait {
+        left: 45vw;
+        top: 10vh;
+        width: 40%;
+        transform: translateZ(100000px); }
+      #head-container .picture-container img.dark {
+        left: 10vw; }
+      #head-container .picture-container .text {
+        font-size: 40px;
+        left: 11vw;
+        top: 34vh; }
+    #head-container .intro.left {
+      display: none; }
+    #head-container .intro.right {
+      left: 15px;
+      bottom: 8vh;
+      font-size: 14px;
+      text-align: left; }
 
   .container .large-title {
-    font-size: 58px;
+    font-size: 50px;
     letter-spacing: 30px;
     right: 0;
     padding: 20px;
@@ -537,7 +539,12 @@ nav {
       -webkit-transition: all 1s 0s;
       transition: all 1s 0s; }
   .container .item-container .title {
-    font-size: 24px; }
+    font-size: 20px;
+    line-height: 1.2; }
+  .container .item-container .date {
+    line-height: 1.2; }
+  .container .item-container .detail {
+    line-height: 1.5; }
 
   .project-container-gd .item-container .graphic-container img {
     width: 100%;
@@ -550,6 +557,21 @@ nav {
       font-size: 18px; }
 
   .about-container .item-container .honor-detail .detail {
-    font-size: 14px; } }
+    font-size: 14px;
+    margin: 0px 0px 0px 70px; }
+
+  .experience-container .item-container .title {
+    font-size: 20px; }
+  .experience-container .item-container .date {
+    margin-top: 5px;
+    line-height: 1.2; }
+  .experience-container .item-container .detail {
+    margin-top: 5px; } }
+@media all and (max-width: 330px) {
+  #head-container .picture-container .text {
+    top: 27vh; }
+
+  .container .large-title {
+    font-size: 40px; } }
 
 /*# sourceMappingURL=index.css.map */
