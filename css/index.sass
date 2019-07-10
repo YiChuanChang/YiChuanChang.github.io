@@ -273,6 +273,12 @@ nav
 			letter-spacing: 1px
 			color: white
 			margin-top: 10px
+			a
+				text-decoration: none
+				color: white
+				font-weight: bold
+				&:hover
+					color: $text-color
 
 		.detail
 			font-family: 'Lato'
@@ -347,11 +353,29 @@ nav
 		.detail
 			margin-bottom: 40px
 
+		a
+			font-family: Lato
+			font-size: 24px
+			font-weight: bold
+			color: white
+			text-decoration: none
+			&:hover
+				color: $text-color
+
 .about-container
 	margin-top: 100px
 	.item-container
 		.date
 			margin: 5px 0px 25px
+		.detail
+			a
+				font-family: Lato
+				font-size: 18px
+				font-weight: bold
+				color: $text-color
+				text-decoration: none
+				&:hover
+					color: white
 
 		.honor-detail
 			padding-left: 20px
@@ -374,6 +398,13 @@ nav
 					top: 20px
 			.detail
 				margin: 0px 70px 0px
+		.social-media
+			a
+				margin-right: 10px
+				img
+					opacity: 0.8
+					&:hover
+						opacity: 1
 
 
 @media all and (max-width: 1185px)
@@ -653,6 +684,9 @@ nav
 
 	.experience-container
 		.item-container
+
+			a
+				font-size: 20px
 			.title
 				font-size: 20px
 			.date

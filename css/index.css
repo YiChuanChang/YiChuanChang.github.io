@@ -245,6 +245,12 @@ nav {
       letter-spacing: 1px;
       color: white;
       margin-top: 10px; }
+      .container .item-container .date a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold; }
+        .container .item-container .date a:hover {
+          color: #c8c8c8; }
     .container .item-container .detail {
       font-family: "Lato";
       font-size: 18px;
@@ -312,11 +318,27 @@ nav {
 
 .experience-container .item-container .detail {
   margin-bottom: 40px; }
+.experience-container .item-container a {
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none; }
+  .experience-container .item-container a:hover {
+    color: #c8c8c8; }
 
 .about-container {
   margin-top: 100px; }
   .about-container .item-container .date {
     margin: 5px 0px 25px; }
+  .about-container .item-container .detail a {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c8c8c8;
+    text-decoration: none; }
+    .about-container .item-container .detail a:hover {
+      color: white; }
   .about-container .item-container .honor-detail {
     padding-left: 20px;
     font-family: Lato;
@@ -338,6 +360,12 @@ nav {
         top: 20px; }
     .about-container .item-container .honor-detail .detail {
       margin: 0px 70px 0px; }
+  .about-container .item-container .social-media a {
+    margin-right: 10px; }
+    .about-container .item-container .social-media a img {
+      opacity: 0.8; }
+      .about-container .item-container .social-media a img:hover {
+        opacity: 1; }
 
 @media all and (max-width: 1185px) {
   .mobile-show {
@@ -560,6 +588,8 @@ nav {
     font-size: 14px;
     margin: 0px 0px 0px 70px; }
 
+  .experience-container .item-container a {
+    font-size: 20px; }
   .experience-container .item-container .title {
     font-size: 20px; }
   .experience-container .item-container .date {
