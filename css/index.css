@@ -8,19 +8,20 @@
 body {
   background: #021926; }
 
-html {
-  scroll-behavior: smooth; }
+.mobile-show {
+  display: none; }
 
 nav {
   position: fixed;
   right: 30px;
   top: -30px;
   text-align: right;
-  z-index: 100000000;
+  z-index: 10000000000;
   -moz-transition: all 0.5s 0s;
   -o-transition: all 0.5s 0s;
   -webkit-transition: all 0.5s 0s;
-  transition: all 0.5s 0s; }
+  transition: all 0.5s 0s;
+  transform: translateZ(100000px); }
   nav .logo {
     top: -30px;
     position: relative;
@@ -56,7 +57,7 @@ nav {
     color: #c8c8c8;
     text-decoration: none;
     font-family: "Lato", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.25;
     letter-spacing: 1.25px;
     text-align: right; }
@@ -106,7 +107,7 @@ nav {
       right: 30px;
       top: 0px; }
   #head-container .picture-container {
-    width: 80%;
+    width: 90%;
     max-width: 1000px;
     margin: 0px auto;
     position: relative; }
@@ -116,7 +117,7 @@ nav {
       background-size: contain;
       background-repeat: no-repeat;
       height: 700px;
-      top: 100px;
+      top: 50px;
       background-image: url("../imgs/bg_1.svg");
       position: absolute; }
     #head-container .picture-container img {
@@ -127,17 +128,17 @@ nav {
         z-index: 0; }
       #head-container .picture-container img.dark {
         top: 0px;
-        width: 90%;
+        width: 85%;
         z-index: 1; }
       #head-container .picture-container img.portrait {
-        left: 28vw;
+        left: 33vw;
         top: 14vh;
-        width: 35%;
+        width: 30%;
         transform: translateZ(100000px); }
     #head-container .picture-container .text {
       transform: translateZ(100000px);
       position: absolute;
-      top: 40vh;
+      top: 37vh;
       z-index: 10;
       font-family: "Ubuntu";
       font-size: 120px;
@@ -147,7 +148,7 @@ nav {
       left: 10vw; }
   #head-container .intro {
     font-family: "Lato", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.71;
     letter-spacing: 0.73px;
     color: #c8c8c8;
@@ -333,15 +334,28 @@ nav {
       margin: 0px 70px 0px; }
 
 @media all and (max-width: 1185px) {
+  .mobile-show {
+    display: block; }
+
+  .mobile-hidden {
+    display: none; }
+
   .container .large-title {
     position: relative;
-    -webkit-transform: rotate(90deg);
+    -webkit-transform: rotate(0deg);
     -webkit-transform-origin: right top;
-    -moz-transform: rotate(90deg);
+    -moz-transform: rotate(0deg);
     -moz-transform-origin: right top;
-    -ms-transform: rotate(90deg);
+    -ms-transform: rotate(0deg);
     -ms-transform-origin: right top;
-    -o-transform: rotate(90deg);
-    -o-transform-origin: right top; } }
+    -o-transform: rotate(0deg);
+    -o-transform-origin: right top;
+    right: 0;
+    padding: 10px;
+    margin: 0px auto;
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+    letter-spacing: 50px; } }
 
 /*# sourceMappingURL=index.css.map */
