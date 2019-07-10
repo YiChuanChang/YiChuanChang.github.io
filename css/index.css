@@ -529,7 +529,7 @@ nav {
       #head-container .picture-container .light-bg {
         margin-top: 60px; }
       #head-container .picture-container img.portrait {
-        left: 45vw;
+        left: 43vw;
         top: 10vh;
         width: 40%;
         transform: translateZ(100000px); }
@@ -538,7 +538,7 @@ nav {
       #head-container .picture-container .text {
         font-size: 40px;
         left: 11vw;
-        top: 34vh; }
+        top: 32vh; }
     #head-container .intro.left {
       display: none; }
     #head-container .intro.right {
