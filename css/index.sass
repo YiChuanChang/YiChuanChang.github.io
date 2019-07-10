@@ -100,7 +100,7 @@ nav
 			top: 15px
 			left: -10px
 			@include transition(all 0.3s 0s)
-		&:hover
+		&:hover, &.active
 			&::before
 				width: 115%
 #head-container
@@ -108,6 +108,7 @@ nav
 	height: 100vh
 	width: 100vw
 	min-height: 50vw
+	max-height: 200vw
 	display: inline-block
 	.social-media
 		position: absolute
@@ -133,6 +134,7 @@ nav
 
 	.picture-container
 		width: 90%
+		height: 90%
 		max-width: 1000px
 		margin: 0px auto
 		position: relative
@@ -142,7 +144,11 @@ nav
 			background-size: contain
 			background-repeat: no-repeat
 			height: 700px
-			top: 50px
+			top: 0px
+			bottom: 0px
+			right: 0px
+			left: 0px
+			margin: auto
 			background-image: url("../imgs/bg_1.svg")
 			position: absolute
 		img
@@ -390,8 +396,253 @@ nav
 			padding: 10px
 			margin: 0px auto
 			max-width: 900px
-			width: 100%
+			width: 90%
 			overflow: hidden
 			letter-spacing: 50px
+			font-size: 100px
 
+	#head-container
+		.picture-container
+			img
+				&.portrait
+					left: 40vw
+					top: 10vh
+					width: 30%
+					transform: translateZ(100000px)
+
+			.text
+				font-size: 100px
+				left: 15vw
+
+@media all and (max-width: 1185px) and (min-height: 1300px)
+
+	#head-container
+		.picture-container
+
+			.light-bg
+				margin-top: 280px
+			img
+				&.portrait
+					left: 40vw
+					top: 13vh
+					width: 45%
+					transform: translateZ(100000px)
+
+			.text
+				font-size: 100px
+				left: 15vw
+				top: 45vh
+
+		.intro
+			&.left
+				left: 30px
+				bottom: 10vh
+			&.right
+				right: 30px
+				bottom: 30vh
+				text-align: right
+
+
+@media all and (max-width: 1020px)
+
+	#head-container
+		.picture-container
+			.light-bg
+				margin-top: 250px
+
+			img
+				&.portrait
+					left: 40vw
+					top: 13vh
+					width: 45%
+					transform: translateZ(100000px)
+
+			.text
+				font-size: 100px
+				left: 15vw
+				top: 40vh
+
+		.intro
+			&.left
+				left: 30px
+				bottom: 10vh
+			&.right
+				right: 30px
+				bottom: 30vh
+
+	.project-container-w-bg
+		&::before, &::after
+			transform: skewY(5deg)
+
+
+@media all and (max-width: 750px)
+
+	nav
+		position: absolute
+		right: 15px
+		top: -40px
+		a
+			font-size: 16px
+		&.active
+			display: none
+
+	#head-container
+
+		.social-media
+			top: 10px
+			left: 15px
+		.picture-container
+			width: 60%
+			.light-bg
+				margin-top: 0px
+
+			img
+				&.portrait
+					left: 35vw
+					top: 15vh
+					width: 30%
+					transform: translateZ(100000px)
+
+			.text
+				font-size: 50px
+				left: 11vw
+				top: 34vh
+
+		.intro
+			&.left
+				left: 15px
+				bottom: 13vh
+				font-size: 14px
+			&.right
+				right: 15px
+				bottom: 35vh
+				font-size: 14px
+
+		.copy-right
+			bottom: 10px
+			left: 15px
+			font-size: 12px
+
+		.scroll
+			right: 15px
+			bottom: 10px
+			img
+				width: 15px
+			div
+				font-size: 13px
+				top: 20px
+
+	.container
+		.large-title
+			font-size: 100px
+			letter-spacing: 30px
+			right: 0
+			padding: 20px
+			margin: 0px 0px
+			width: 90%
+			span
+				font-size: 40px
+				letter-spacing: 10px
+
+
+	.project-container-gd 
+		.item-container 
+			.graphic-container 
+				.text-wrap
+					margin-top: 50px
+					.title
+						font-size: 18px
+
+@media all and (max-width: 570px)
+	#head-container
+		.picture-container
+			.text
+				font-size: 40px
+
+
+@media all and (max-width: 500px)
+
+	nav
+		top: -35px
+		a
+			&::before
+				top: 10px
+
+	#head-container
+
+		.social-media
+			top: 10px
+			left: 15px
+			a
+				padding-top: 7px
+				img
+					width: 20px
+					height: 20px
+		.logo
+			padding-top: 20px	
+
+		.picture-container
+			width: 100%
+			.light-bg
+				margin-top: 80px
+
+			img
+				&.portrait
+					left: 45vw
+					top: 15vh
+					width: 40%
+					transform: translateZ(100000px)
+				&.dark
+					left: 10vw
+			.text
+				font-size: 50px
+				left: 11vw
+				top: 34vh
+
+		.intro
+			&.left
+				display: none
+			&.right
+				left: 15px
+				bottom: 8vh
+				font-size: 14px
+				text-align: left
+
+	.container
+		.large-title
+			font-size: 58px
+			letter-spacing: 30px
+			right: 0
+			padding: 20px
+			margin: 0px 0px
+			width: 90%
+			padding-bottom: 0px
+			@include transition(all 1s 0s)
+			span
+				font-size: 25px
+				letter-spacing: 5px
+				@include transition(all 1s 0s)
+		.item-container
+			.title
+				font-size: 24px
+
+
+	.project-container-gd 
+		.item-container 
+			.graphic-container 
+				img
+					width: 100%
+					margin-bottom: 0px
+				.text-wrap
+					margin-top: 10px
+					padding-left: 0px
+					width: 100%
+					.title
+						font-size: 18px
+
+	.about-container 
+		.item-container 
+			.honor-detail 
+				.detail 
+					font-size: 14px
 

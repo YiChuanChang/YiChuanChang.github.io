@@ -13,6 +13,10 @@ $(window).scroll(function() {
             $(this).removeClass('inview');
         }
     });
+
+    //    <a href="#project-container-cv">Projects</a><br>
+    //    <a href="#experience-container">Experience</a><br>
+    //    <a href="#about-container">About</a>
 });
 
 $.fn.isInViewport = function() {
