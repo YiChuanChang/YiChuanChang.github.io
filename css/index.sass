@@ -1,0 +1,383 @@
+$main-color : #021926
+$text-color : #c8c8c8
+// define animation mixin
+@mixin transition($transition...)
+	-moz-transition:    $transition
+	-o-transition:      $transition
+	-webkit-transition: $transition
+	transition:         $transition
+
+@mixin transition-property($property...) 
+	-moz-transition-property:    $property
+	-o-transition-property:      $property
+	-webkit-transition-property: $property
+	transition-property:         $property
+
+@mixin transition-duration($duration...) 
+	-moz-transition-property:    $duration
+	-o-transition-property:      $duration
+	-webkit-transition-property: $duration
+	transition-property:         $duration
+
+@mixin transition-timing-function($timing...) 
+	-moz-transition-timing-function:    $timing
+	-o-transition-timing-function:      $timing
+	-webkit-transition-timing-function: $timing
+	transition-timing-function:         $timing
+
+@mixin transition-delay($delay...) 
+	-moz-transition-delay:    $delay
+	-o-transition-delay:      $delay
+	-webkit-transition-delay: $delay
+	transition-delay:         $delay
+
+
+@keyframes bounce 
+	0%, 20%, 50%, 80%, 100%
+		transform: translateY(0)
+	40%
+		transform: translateY(-20px)
+	60%
+		transform: translateY(-10px)
+
+
+body
+	background: $main-color
+html
+	scroll-behavior: smooth
+
+nav
+	position: fixed
+	right: 30px
+	top: -30px
+	text-align: right
+	z-index: 100000000
+	@include transition(all 0.5s 0s)
+	.logo
+		top: -30px
+		position: relative
+		opacity: 0
+		@include transition(all 0.5s 0s)
+	&::before
+		content: " "
+		position: absolute
+		top: -100px
+		right: -30px
+		z-index: -1
+		background-color: black
+		height: 260px
+		width: 0px
+		@include transition(all 0.5s 0s)
+	&.active
+		top: 20px
+		&::before
+			width: 180px
+
+		.logo
+			top: 0px
+			opacity: 1
+			padding-bottom: 5px
+
+	a
+		display: inline-block
+		position: relative
+		color: $text-color
+		text-decoration: none
+		font-family: 'Lato', sans-serif
+		font-size: 24px
+		line-height: 1.25
+		letter-spacing: 1.25px
+		text-align: right
+		&::before
+			content: " "
+			background-color: $text-color
+			display: block
+			position: absolute
+			height: 1.5px
+			width: 0%
+			top: 15px
+			left: -10px
+			@include transition(all 0.3s 0s)
+		&:hover
+			&::before
+				width: 115%
+#head-container
+	position: relative
+	height: 100vh
+	width: 100vw
+	min-height: 50vw
+	display: inline-block
+	.social-media
+		position: absolute
+		top: 30px
+		left: 30px
+		a
+			display: block
+			padding-top: 15px
+			img
+				width: 30px
+				height: 30px
+	.logo
+		width: 81px
+		padding-top: 30px
+		margin: 0px auto 0px
+		z-index: 100000000000
+		@include transition(all 0.5s 0.5s)
+		&.active
+			position: fixed
+			right: 30px
+			top: 0px
+
+
+	.picture-container
+		width: 80%
+		max-width: 1000px
+		margin: 0px auto
+		position: relative
+		.light-bg
+			min-width: 100%
+			max-height: 700px
+			background-size: contain
+			background-repeat: no-repeat
+			height: 700px
+			top: 100px
+			background-image: url("../imgs/bg_1.svg")
+			position: absolute
+		img
+			position: absolute
+
+			&.light
+				top: 100px
+				width: 100%
+				z-index: 0
+
+			&.dark
+				top: 0px
+				width: 90%
+				z-index: 1
+
+			&.portrait
+				left: 28vw
+				top: 14vh
+				width: 35%
+				transform: translateZ(100000px)
+		.text
+			transform: translateZ(100000px)
+			position: absolute
+			top: 40vh
+			z-index: 10
+			font-family: 'Ubuntu'
+			font-size: 120px
+			font-weight: bold
+			letter-spacing: 1.76px
+			color: #f8e71c
+			left: 10vw
+
+	.intro
+		font-family: 'Lato', sans-serif
+		font-size: 18px
+		line-height: 1.71
+		letter-spacing: 0.73px
+		color: $text-color
+		position: absolute
+		transform: translateZ(100000px)
+		&.left
+			left: 30px
+			bottom: 30vh
+		&.right
+			right: 30px
+			bottom: 40vh
+			text-align: right
+	.copy-right
+		transform: translateZ(100000px)
+		position: absolute
+		left: 30px
+		bottom: 30px
+		color: $text-color
+		font-family: 'Lato'
+		font-size: 14px
+		letter-spacing: 1.21px
+	.scroll
+		position: absolute
+		font-family: 'Lato'
+		right: 30px
+		bottom: 30px
+		animation: bounce 2.5s infinite
+		div
+			color: $text-color
+			font-family: 'Lato'
+			font-size: 18px
+			letter-spacing: 1.21px
+			position: absolute
+			top: 30px
+			left: -18px
+			transform: rotate(-0.25turn)
+
+.container
+	position: relative
+	.large-title
+		-webkit-transform: rotate(-90deg)
+		-webkit-transform-origin: right top
+		-moz-transform: rotate(-90deg)
+		-moz-transform-origin: right top
+		-ms-transform: rotate(-90deg)
+		-ms-transform-origin: right top
+		-o-transform: rotate(-90deg)
+		-o-transform-origin: right top
+		-webkit-text-stroke: 1px #f8e71c
+		font-family: 'Ubuntu'
+		font-size: 120px
+		font-weight: bold
+		letter-spacing: 80px
+		color: rgba(248, 231, 28, 0)
+		position: absolute
+		top: 0px
+		right: 100%
+		@include transition(all 1.5s 0s)
+
+		span
+			font-size: 48px
+			letter-spacing: 30px
+			@include transition(all 1.5s 0s)
+
+		&.inview
+			letter-spacing: 1.76px
+			span
+				letter-spacing: 2.4px
+
+	.item-container
+		max-width: 900px
+		margin: 0px auto
+		padding: 20px
+		min-height: 300px
+
+		.title
+			font-family: 'Lato'
+			font-size: 28px
+			font-weight: bold
+			line-height: 1.39
+			letter-spacing: 1.46px
+			color: white
+
+		.date
+			font-family: 'Lato'
+			font-size: 14px
+			letter-spacing: 1px
+			color: white
+			margin-top: 10px
+
+		.detail
+			font-family: 'Lato'
+			font-size: 18px
+			line-height: 1.67
+			letter-spacing: 0.94px
+			color: $text-color
+			margin-top: 15px
+
+		.project-sep
+			width: 100%
+			height: 1px
+			background-color: $text-color
+			margin: 40px 0px 10px
+
+.project-container-w-bg
+	background-color: #0a2635
+	margin-top: 100px
+	padding-top: 20px
+	padding-bottom: 50px
+	&::before
+		position: absolute
+		content: " "
+		display: block
+		top: -100px
+		width: 100%
+		height: 100px 
+		background: #0a2635
+		transform-origin: left
+		transform: skewY(2deg)
+		z-index: -1
+		box-shadow: inset 0px 35px 35px -20px rgba(0, 0, 0, 0.5)
+	&::after
+		position: absolute
+		content: " "
+		display: block
+		bottom: -30px
+		width: 100%
+		height: 100px 
+		background: #0a2635
+		transform-origin: left
+		transform: skewY(2deg)
+		z-index: -1
+		box-shadow: inset 0px -35px 35px -20px rgba(0, 0, 0, 0.5)
+
+.project-container-gd
+	margin-top: 100px
+	.item-container
+		.graphic-container
+			width: 100%
+			margin-top: 40px
+			display: inline-block
+			min-height: 40px
+			img
+				display: block
+				margin-bottom: 60px	
+				width: 55%
+			.text-wrap
+				display: block
+				width: 38%
+				padding-left: 30px
+				margin-top: 130px
+				vertical-align: middle 
+			&.left
+				.text-wrap, img
+					float: right
+			&.right
+				.text-wrap, img
+					float: left
+.experience-container
+	.item-container
+		.detail
+			margin-bottom: 40px
+
+.about-container
+	margin-top: 100px
+	.item-container
+		.date
+			margin: 5px 0px 25px
+
+		.honor-detail
+			padding-left: 20px
+			font-family: Lato
+			font-size: 18px
+			letter-spacing: 1.46px
+			color: #e4e4e4
+			margin-top: 10px
+			.year
+				font-weight: bold
+				position: relative
+				&::after
+					width: 40px
+					height: 2px
+					background-color: #f8e71c
+					transform: rotate(-45deg)
+					content: " "
+					position: absolute
+					left: 35px
+					top: 20px
+			.detail
+				margin: 0px 70px 0px
+
+@media all and (max-width: 1185px)
+	.container
+		.large-title
+			position: relative
+			-webkit-transform: rotate(90deg)
+			-webkit-transform-origin: right top
+			-moz-transform: rotate(90deg)
+			-moz-transform-origin: right top
+			-ms-transform: rotate(90deg)
+			-ms-transform-origin: right top
+			-o-transform: rotate(90deg)
+			-o-transform-origin: right top
+
+
