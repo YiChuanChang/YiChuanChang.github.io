@@ -527,10 +527,10 @@ nav {
     #head-container .picture-container {
       width: 100%; }
       #head-container .picture-container .light-bg {
-        margin-top: 60px; }
+        margin-top: 45px; }
       #head-container .picture-container img.portrait {
         left: 43vw;
-        top: 6vh;
+        top: 3vh;
         width: 40%;
         transform: translateZ(100000px); }
       #head-container .picture-container img.dark {
@@ -538,7 +538,7 @@ nav {
       #head-container .picture-container .text {
         font-size: 40px;
         left: 11vw;
-        top: 28vh; }
+        top: 25vh; }
     #head-container .intro.left {
       display: none; }
     #head-container .intro.right {
