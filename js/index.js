@@ -29,6 +29,17 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+var typed = new Typed('#head-container .picture-container .text span', {
+  strings: ["YCChang", "an engineer", "art lover", "music fan"],
+
+  loop: true,
+  startDelay: 10,
+  backSpeed: 30,
+  backDelay: 1000,
+  typeSpeed: 140
+});
+
+
 $('.mega').paroller();
 $(".text-wrap").paroller({ factor: 0.05, factorXs: -0.02, factorSm: 0.1, type: 'foreground' });  
 

@@ -35,7 +35,7 @@
     <link rel="image_src" type="image/jpeg" href="imgs/logo.ico">
     
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="shortcut icon" href="imgs/general/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="imgs/logo.ico" type="image/x-icon" />
     <!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#021926">
 	<!-- Windows Phone -->
@@ -51,9 +51,9 @@
 		<a href='#head-container' class="logo">
 			<img alt='logo' src='imgs/logo.svg'>
 		</a><br>
-		<a href="#project-container-cv">Projects</a><br>
-		<a href="#experience-container">Experience</a><br>
-		<a href="#about-container">About</a>
+		<a class="item" href="#project-container-cv">Projects</a><br>
+		<a class="item" href="#experience-container">Experience</a><br>
+		<a class="item" href="#about-container">About</a>
 	</nav>
 	<div class='head-container' id="head-container">
 		<div class='social-media'>
@@ -83,7 +83,7 @@
 			<div class='text'>
 				Hello,<br>
 				I am<br>
-				YCChang
+				<span></span>
 			</div>
 		</div>
 
@@ -120,6 +120,8 @@
 		<div class='item-container'>
 
 			<div class='title'>One-shot Image-to-Image Translation</div>
+			<a href='https://github.com/YiChuanChang/One-shot-Image-to-Image-Translation' target='_blank'><img src='imgs/github.svg' alt='github link'></a>
+			<a href='https://etd.lib.nctu.edu.tw/cgi-bin/gs32/hugsweb.cgi/ccd=qwb.IW/record?r1=1&h1=0' target='_blank'><img src='imgs/paper.svg' alt='paper link'></a>
 			<div class='date'>2019 | Research in <a href='https://htchen.github.io' target='_blank'>VLLab</a></div>
 			<div class='detail'>We discuss how a deep learning model may tackle the one-shot learning scenario on image translation. We propose a two-step training strategy to solve the blurry image result due to the lack of training data. Furthermore, we successfully get the grouping information when extracting features. Finally, we show that most people prefer the synthesized images from our model.</div>
 			<div class='project-sep'></div>
@@ -135,6 +137,8 @@
 
 			<div class='project-sep'></div>
 			<div class='title'>Cascaded-GAN for Personalized Handwriting Synthesis</div>
+			<a href='https://github.com/refu0523/Cascaded-GAN' target='_blank'><img src='imgs/github.svg' alt='github link'></a>
+			<a href='https://etd.lib.nctu.edu.tw/cgi-bin/gs32/hugsweb.cgi/ccd=qwb.IW/record?r1=1&h1=0' target='_blank'><img src='imgs/paper.svg' alt='paper link'></a>
 			<div class='date'>2017 | Cooperate with <a href='https://github.com/refu0523' target='_blank'>Zyan Liu</a></div>
 			<div class='detail'>We present a cascaded conditional adversarial network to construct the transformation between Chinese characters of two different fonts that exhibit a large structural difference. The end-to-end trained model takes only a subset of Chinese characters as training data, and learns to generalize and achieve elaborated handwriting synthesis. The mechanism of the proposed Cascaded-GAN decouples and simplifies the training task. The experimental results show that Cascaded-GAN can imitate the original handwriting styles more naturally, and the rendered handwriting passages look plausible with subtle variations.</div>
 
@@ -151,6 +155,7 @@
 				<div class='text-wrap' >
 					<div class='title'>Artmay 2019 Website Design and Implement</div>
 					<div class='date'>2019 May</div>
+					<div class='date'><a href='https://nthuartmay.com'>See the website ></a></div>
 				</div>
 			</div>
 			<div class='graphic-container right'>
@@ -165,6 +170,7 @@
 				<div class='text-wrap' >
 					<div class='title'>Typography Experiment </div>
 					<div class='date'>2017 Jun</div>
+					<div class='date'><a href='https://issuu.com/ycchang_tony/docs/book_f3_37f5aa87650e4b'>See the book ></a></div>
 				</div>
 			</div>
 			<div class='graphic-container right'>
@@ -262,6 +268,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src='vendor/tilt.js'></script>
+<script src='vendor/type.js'></script>
 <script src='vendor/jquery.paroller.min.js'></script>
 <script src="js/index.js"></script>
 </html>
