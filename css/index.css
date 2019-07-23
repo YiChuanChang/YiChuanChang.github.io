@@ -90,7 +90,9 @@ nav {
   #head-container .social-media {
     position: absolute;
     top: 30px;
-    left: 30px; }
+    left: 30px;
+    z-index: 100000000000000000;
+    transform: translateZ(200000px); }
     #head-container .social-media a {
       display: block;
       padding-top: 15px;
