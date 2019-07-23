@@ -93,7 +93,10 @@ nav {
     left: 30px; }
     #head-container .social-media a {
       display: block;
-      padding-top: 15px; }
+      padding-top: 15px;
+      opacity: 0.8; }
+      #head-container .social-media a:hover {
+        opacity: 1; }
       #head-container .social-media a img {
         width: 30px;
         height: 30px; }
@@ -457,7 +460,7 @@ nav {
     position: absolute;
     right: 15px;
     top: -40px; }
-    nav a {
+    nav a, nav .item {
       font-size: 16px; }
     nav.active {
       display: none; }
@@ -520,8 +523,10 @@ nav {
 @media all and (max-width: 500px) {
   nav {
     top: -35px; }
-    nav a::before {
-      top: 10px; }
+    nav a, nav .item {
+      font-size: 12px; }
+      nav a::before, nav .item::before {
+        top: 10px; }
 
   #head-container {
     height: 90vh; }

@@ -120,6 +120,9 @@ nav
 		a
 			display: block
 			padding-top: 15px
+			opacity: 0.8
+			&:hover
+				opacity: 1
 			img
 				width: 30px
 				height: 30px
@@ -525,7 +528,7 @@ nav
 		position: absolute
 		right: 15px
 		top: -40px
-		a
+		a, .item
 			font-size: 16px
 		&.active
 			display: none
@@ -607,7 +610,8 @@ nav
 
 	nav
 		top: -35px
-		a
+		a, .item
+			font-size: 12px
 			&::before
 				top: 10px
 
