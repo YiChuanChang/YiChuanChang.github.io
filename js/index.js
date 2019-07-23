@@ -14,9 +14,18 @@ $(window).scroll(function() {
         }
     });
 
-    //    <a href="#project-container-cv">Projects</a><br>
-    //    <a href="#experience-container">Experience</a><br>
-    //    <a href="#about-container">About</a>
+    if($('#about-container').isInViewport()){
+        $('nav .item').removeClass('active');
+        $('#about-nav').addClass('active');
+    }else if($('#experience-container').isInViewport()){
+        $('nav .item').removeClass('active');
+        $('#exp-nav').addClass('active');
+    }else if($('#project-container-cv').isInViewport() || $('#project-container-gd').isInViewport()){
+        $('nav .item').removeClass('active');
+        $('#project-nav').addClass('active');
+    }else{
+        $('nav .item').removeClass('active');
+    }
 });
 
 $.fn.isInViewport = function() {
@@ -35,7 +44,7 @@ var typed = new Typed('#head-container .picture-container .text span', {
   loop: true,
   startDelay: 10,
   backSpeed: 30,
-  backDelay: 1000,
+  backDelay: 2000,
   typeSpeed: 140
 });
 

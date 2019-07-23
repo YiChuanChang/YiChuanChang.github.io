@@ -51,6 +51,9 @@ nav {
       top: 0px;
       opacity: 1;
       padding-bottom: 5px; }
+  nav img {
+    display: inline-block;
+    margin-bottom: 5px; }
   nav .item {
     display: inline-block;
     position: relative;
